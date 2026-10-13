@@ -23,4 +23,13 @@ fun main() {
     catch (error: ArithmeticException) {
         println("You tried to divide by zero")
     }
+
+    try {
+        println("Start")
+        val number = "hello".toInt()
+    } catch (problem: NumberFormatException) {
+        println("Invalid number")
+    } finally {
+        println("Clean up")
+    }
 }
