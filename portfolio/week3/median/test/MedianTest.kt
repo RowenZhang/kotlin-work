@@ -17,4 +17,24 @@ class MedianTest : FreeSpec({
     }
 
     // Write four more tests here
+
+    //This test checks whether the function correctly returns the only element when the list contains one value.
+    "Median when size=1" {
+        median(listOf(5.0f)) shouldBe (5.0f plusOrMinus tolerance)
+    }
+
+    //This test checks whether the function correctly calculates the average of two elements.
+    "Median when size=2" {
+        median(listOf(3.0f, 8.0f)) shouldBe (5.5f plusOrMinus tolerance)
+    }
+
+    //This test checks whether the function sorts an unsorted list and returns the middle value.
+    "Median when size=3" {
+        median(listOf(9.0f, 2.0f, 5.0f)) shouldBe (5.0f plusOrMinus tolerance)
+    }
+
+    //This test checks whether the function sorts an unsorted list and correctly calculates the average of the two middle values.
+    "Median when size=4" {
+        median(listOf(8.0f, 3.0f, 7.0f, 2.0f)) shouldBe (5.0f plusOrMinus tolerance)
+    }
 })
